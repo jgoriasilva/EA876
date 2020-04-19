@@ -14,9 +14,14 @@ void yyerror(char *);
           return INT;
         }
 
-[+]     {
-          return SOMA;
-        }
+\+     { return SOMA; }
+
+\-				{ return SUB; }
+
+\*				{ return MULT; }
+
+
+\/				{return DIV; }
 
 \n   {
          return EOL;
